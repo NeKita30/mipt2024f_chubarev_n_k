@@ -17,9 +17,15 @@ reader = BarCodeReader()
 # print(reader.decode('data/composite.png'))
 # print(reader.decode('data/composite1.png'))
 # print(reader.decode('data/cut_cut.png'))
-print(reader.decode('data/multi_one.png'))
+# print(reader.decode('data/multi_one.png'))
 
 # print(results := reader.decode('data/multi.png'))
 # img = Image.open('data/multi.png')
 # for res in results:
-    
+
+from numpy import asarray
+img = Image.open('data/very_cut.png')
+numpydata = asarray(img)
+
+print(reader.decode_array(numpydata))
+

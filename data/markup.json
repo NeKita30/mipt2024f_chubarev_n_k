@@ -1,0 +1,86 @@
+[
+  {
+    "file": "mode2.png",
+    "type": "maxi_code",
+    "data": "[)>\u001E01\u001D96123450000\u001D222\u001D111\u001DMODE2",
+    "description": ""
+  },
+  {
+    "file": "pdf417.png",
+    "type": "pdf_417",
+    "data": "-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-ActiveBarcode-ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+    "description": ""
+  },
+  {
+    "file": "qr_code.png",
+    "type": "qr",
+    "data": "Version 3 QR Code",
+    "description": ""
+  },
+  {
+    "file": "data_matrix.png",
+    "type": "data_matrix",
+    "data": "Wikipedia, the free encyclopedia",
+    "description": ""
+  },
+  {
+    "file": "unusual_form_orig.png",
+    "type": "ean_13",
+    "data": "4607053473537",
+    "description": "Barcode in unusual form (Prostokvashino), origin"
+  },
+  {
+    "file": "unusual_form.png",
+    "type": "ean_13",
+    "data": "4607053473537",
+    "description": "Barcode in unusual form (Prostokvashino), cut to barcode"
+  },
+  {
+    "file": "proj.png",
+    "type": "ean_13",
+    "data": "9785041190897",
+    "description": "Barcode with homography"
+  },
+  {
+    "file": "light.png",
+    "type": "ean_13",
+    "data": "4607053473803",
+    "description": "Barcode with a glare"
+  },
+  {
+    "file": "hard_one.png",
+    "type": "ean_13",
+    "data": "4601347009273",
+    "description": "Barcode on a rough surface with glares"
+  },
+  {
+    "file": "cut_qr.png",
+    "type": "qr",
+    "data": "http://en.m.wikipedia.org/",
+    "description": "Damaged but still decodable QR code"
+  },
+  {
+    "file": "cut.png",
+    "type": "ean_13",
+    "data": "9781556156786",
+    "description": "Very damaged barcode with glares"
+  },
+  {
+    "file": "composite.png",
+    "type": "databar_expanded_stacked",
+    "data": "0102420000106065111701181717021810123452112",
+    "description": ""
+  },
+  {
+    "file": "composite1.png",
+    "type": "databar_expanded_stacked",
+    "data": "0101234567890128",
+    "description": ""
+  },
+  {
+    "file": "multi.png",
+    "type": "databar_expanded_stacked",
+    "data": "0101234567890128",
+    "description": ""
+  }
+]

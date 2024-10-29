@@ -1,10 +1,11 @@
 from pyzbar.pyzbar import decode as pyzbar_bar_decode, ZBarSymbol
 from pylibdmtx.pylibdmtx import decode as pylibdmtx_dm_decode
 from pyzxing import BarCodeReader as PyzxingBarCodeReader
+import numpy as np
 
 
 class BarcodeDecoder:
-    def decode(self, data, bar_type=None):
+    def decode(self, data: np.ndarray, bar_type: str = ""):
         if res := self.__pyzxing_decode(data):
             return res
         if bar_type == "data_matrix":

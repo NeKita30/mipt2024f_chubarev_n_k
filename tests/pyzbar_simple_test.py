@@ -44,9 +44,12 @@ from pylibdmtx.pylibdmtx import decode as dm_decode
 # img = Image.open('data/multi.png')
 # print(pyzbar.decode(img))
 
-# img = Image.open('data/multi_one.png')
-# # print(dm_decode(img))
+img = Image.open('data/data_matrix.png')
+print(dm_decode(img))
 # print(pyzbar.decode(img))
 
-img = Image.open('data/very_cut.png')
-print(pyzbar.decode(img))
+# img = Image.open('data/very_cut.png')
+# print(pyzbar.decode(img))
+
+# img = Image.open('data/black_on_black.png')
+# print(pyzbar.decode(img))

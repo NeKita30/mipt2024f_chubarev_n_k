@@ -1,2 +1,2 @@
-from .BarcodeDecoder import BarcodeDecoder
-__all__ = ['BarcodeDecoder']
+from .BarcodeDecoder import BarcodeDecoder, DecodedBarCode
+__all__ = ['BarcodeDecoder', 'DecodedBarCode']

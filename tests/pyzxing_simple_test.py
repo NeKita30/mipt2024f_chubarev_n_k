@@ -1,5 +1,6 @@
 from PIL import Image
 from pyzxing import BarCodeReader
+from numpy import asarray
 
 
 reader = BarCodeReader()
@@ -10,7 +11,7 @@ reader = BarCodeReader()
 # print(reader.decode('data/unusual_form.png'))
 # print(reader.decode('data/unusual_form_orig.png'))
 # print(reader.decode('data/proj.png'))
-print(reader.decode('data/hard_one.png'))
+# print(reader.decode('data/hard_one.png'))
 # print(reader.decode('data/light.png'))
 # print(reader.decode('data/cut.png'))
 # print(reader.decode('data/cut_qr.png'))
@@ -30,3 +31,8 @@ print(reader.decode('data/hard_one.png'))
 #
 # print(reader.decode_array(numpydata))
 
+import os
+for f in os.listdir('data'):
+    if f.endswith('.png'):
+        img = Image.open('data/' + f)
+        print(f, reader.decode_array(asarray(img)))

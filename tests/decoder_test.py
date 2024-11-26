@@ -19,5 +19,5 @@ for res in dm:
     if not dec_res:
         print(file, "not decoded")
         continue
-    if dec_res[0].type != dm[res]['regions'][0]['region_attributes']['type']:
-        print(file, "wrong result:", dec_res[0].type, "expected:", dm[res]['regions'][0]['region_attributes']['type'])
+    if dec_res.type != dm[res]['regions'][0]['region_attributes']['type']:
+        print(file, "wrong result:", dec_res.type, "expected:", dm[res]['regions'][0]['region_attributes']['type'])

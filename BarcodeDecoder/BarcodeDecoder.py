@@ -4,7 +4,7 @@ from pyzxing import BarCodeReader as PyzxingBarCodeReader
 from collections import namedtuple
 import numpy as np
 
-from .types_translate import pylibdmtx_types, pyzxing_types
+from .types_translate import pyzbar_types, pyzxing_types
 
 DecodedBarCode = namedtuple('Decoded', 'data type')
 
@@ -25,29 +25,24 @@ class BarcodeDecoder:
 
     def __pyzxing_decode(self, data):
         lib_results = self.pyzxing_reader.decode_array(data)
-        results = []
         for lib_result in lib_results:
             if 'parsed' in lib_result:
-                results.append(DecodedBarCode(data=lib_result['parsed'],
-                                              type=pyzxing_types[lib_result['format'].decode('utf-8')]))
-        return results
+                return DecodedBarCode(data=lib_result['parsed'],
+                                      type=pyzxing_types[lib_result['format'].decode('utf-8')])
+        return None
 
     @staticmethod
     def __pyzbar_decode(data, bar_type):
         lib_results = pyzbar_bar_decode(data, bar_type)
-        results = []
         for lib_result in lib_results:
-            # poly = ((lib_result.rect.left, lib_result.rect.top),
-            #         lib_result.rect.width, lib_result.rect.height)
-            results.append(DecodedBarCode(data=lib_result.data,
-                                          type=pylibdmtx_types[lib_result.type]))
-        return results
+            return DecodedBarCode(data=lib_result.data,
+                                  type=pyzbar_types[lib_result.type])
+        return None
 
     @staticmethod
     def __pylibdmtx_decode(data):
         lib_results = pylibdmtx_dm_decode(data)
-        results = []
         for lib_result in lib_results:
-            results.append(DecodedBarCode(type="data_matrix",
-                                          data=lib_result.data))
-        return results
+            return DecodedBarCode(type="data_matrix",
+                                  data=lib_result.data)
+        return None

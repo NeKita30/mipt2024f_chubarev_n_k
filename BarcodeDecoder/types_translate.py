@@ -6,14 +6,16 @@ pyzxing_types = {'EAN_8': "ean_8",
                  'MAXICODE': "maxi_code",
                  'PDF_417': 'pdf_417',
                  'QR_CODE': 'qr',
-                 'RSS_EXPANDED': "databar_expanded"}
+                 'RSS_EXPANDED': "databar_expanded",
+                 'ITF': "interleaved_2_of_5"}
 
-pylibdmtx_types = {'EAN8': "ean_8",
-                   'EAN13': "ean_13",
-                   'EAN128': "ean_128",
-                   'CODE39': "code_39",
-                   'CODE128': "code_128",
-                   'MAXICODE': "maxi_code",
-                   'PDF417': "pdf_417",
-                   'QRCODE': "qr",
-                   'DATABAR_EXP': "databar_expanded"}
+pyzbar_types = {'EAN8': "ean_8",
+                'EAN13': "ean_13",
+                'EAN128': "ean_128",
+                'CODE39': "code_39",
+                'CODE128': "code_128",
+                'MAXICODE': "maxi_code",
+                'PDF417': "pdf_417",
+                'QRCODE': "qr",
+                'DATABAR_EXP': "databar_expanded",
+                'I25': "interleaved_2_of_5"}

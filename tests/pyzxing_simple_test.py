@@ -20,6 +20,7 @@ reader = BarCodeReader()
 # print(reader.decode('data/cut_cut.png'))
 # print(reader.decode('data/multi_one.png'))
 # print(reader.decode('data/black_on_black.png'))
+print(reader.decode('data/in2o5.png'))
 
 # print(results := reader.decode('data/multi.png'))
 # img = Image.open('data/multi.png')
@@ -31,8 +32,8 @@ reader = BarCodeReader()
 #
 # print(reader.decode_array(numpydata))
 
-import os
-for f in os.listdir('data'):
-    if f.endswith('.png'):
-        img = Image.open('data/' + f)
-        print(f, reader.decode_array(asarray(img)))
+# import os
+# for f in os.listdir('data'):
+#     if f.endswith('.png'):
+#         img = Image.open('data/' + f)
+#         print(f, reader.decode_array(asarray(img)))

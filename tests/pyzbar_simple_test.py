@@ -54,8 +54,11 @@ from pylibdmtx.pylibdmtx import decode as dm_decode
 # img = Image.open('data/black_on_black.png')
 # print(pyzbar.decode(img))
 
-import os
-for f in os.listdir('data'):
-    if f.endswith('.png'):
-        img = Image.open('data/' + f)
-        print(f, pyzbar.decode(img))
+img = Image.open('data/in2o5.png')
+print(pyzbar.decode(img))
+
+# import os
+# for f in os.listdir('data'):
+#     if f.endswith('.png'):
+#         img = Image.open('data/' + f)
+#         print(f, pyzbar.decode(img))

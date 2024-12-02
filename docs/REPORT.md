@@ -1,5 +1,9 @@
 # Отчет
 
+Работу выполнил: Чубарев Никита
+
+ТЗ: [docs/TOR.md](TOR.md)
+
 ## Результат
 Декодер - класс `BarcodeDecoder` (в модуле [BarcodeDecoder](../BarcodeDecoder)).
 Результат его работы - namedtuple `DecodedBarCode`.
@@ -49,3 +53,12 @@ res2 = decoder.decode(img_arr2, "data_matrix")
 
 Работа библиотеки pyzbar проверенна [отдельно](https://colab.research.google.com/drive/1x_BnHwUhyHBJ7L5jDWW-krYTr8L_1RY-?usp=sharing) (ноутбук с картинками), 
 выявленны диапозоны допустимых значений параметров качества входных картинок (поворот, контрастность и др.).
+
+## Размеченные данные
+В [data](../data) лежат размеченные данные - изображения штрих-кодов. 
+
+Для разметки взят инструмент [VGG Annotator Version 2.0.12](https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html).
+
+В [data/data_markup.json](../data/data_markup.json) находится сама разметка.
+
+

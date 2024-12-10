@@ -27,16 +27,19 @@ class BarcodeDecoder:
         lib_results = self.pyzxing_reader.decode_array(data)
         for lib_result in lib_results:
             if 'parsed' in lib_result:
+                type_ = pyzxing_types.get(lib_result['format'].decode('utf-8'),
+                                          lib_result['format'].decode('utf-8'))
                 return DecodedBarCode(data=lib_result['parsed'],
-                                      type=pyzxing_types[lib_result['format'].decode('utf-8')])
+                                      type=type_)
         return None
 
     @staticmethod
     def __pyzbar_decode(data, bar_type):
         lib_results = pyzbar_bar_decode(data, bar_type)
         for lib_result in lib_results:
+            type_ = pyzbar_types.get(lib_result.type, lib_result.type)
             return DecodedBarCode(data=lib_result.data,
-                                  type=pyzbar_types[lib_result.type])
+                                  type=type_)
         return None
 
     @staticmethod

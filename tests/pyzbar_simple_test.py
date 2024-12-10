@@ -54,7 +54,7 @@ from pylibdmtx.pylibdmtx import decode as dm_decode
 # img = Image.open('data/black_on_black.png')
 # print(pyzbar.decode(img))
 
-img = Image.open('data/in2o5.png')
+img = Image.open('data/aztec_new.png')
 print(pyzbar.decode(img))
 
 # import os
